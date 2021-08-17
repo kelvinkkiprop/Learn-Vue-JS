@@ -1,20 +1,24 @@
 <template>
   <div id="app">
     <Navbar/>
+
+    <Index/>
+
     <Footer/>
   </div>
 </template>
 
 <script>
 
-import Navbar from './components/Navbar.vue'
-import Footer from './components/Footer.vue'
+import Navbar from './components/inc/Navbar.vue'
+import Footer from './components/inc/Footer.vue'
+import Index from './components/index.vue'
 
 
 export default {
   name: 'App',
   components: {
-    Navbar,Footer
+    Navbar,Footer, Index
   }
 }
 </script>

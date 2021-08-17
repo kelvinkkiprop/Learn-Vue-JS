@@ -11,17 +11,34 @@ vue create learn-vue-js -d
 4. Start server 
 npm run serve
 
+
+
+
 B. BOOTSTRAP
 1. Installation
 npm install bootstrap OR npm install bootstrap@4.6.0
 npm i bootstrap bootstrap-vue  OR npm i bootstrap-vue@2.21.2
 
 2. Usage: add below lines to src/main.js
-import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import App from './App.vue'
-
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min';
+
+C. JQUERY $ POPPER
+1. Installation
+npm install jquery popper.js
+
+2. Usage: add below lines to src/main.js
+import $ from 'jquery';
+import Popper from 'popper.js';
+
+
+
+
+D. BOOTSTRAP-VUE
+1. Installation
+npm i bootstrap bootstrap-vue  OR npm i bootstrap-vue@2.21.2
+2. Usage: add below lines to src/main.js
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
@@ -32,6 +49,10 @@ Vue.use(IconsPlugin)
 new Vue({
   render: h => h(App),
 }).$mount('#app')
+
+
+
+
 
 
 C. ERRORS
