@@ -1,0 +1,44 @@
+A. VUE
+1. Install Vue CLI (NodeJS must be installed first)
+npm install -g @vue/cli
+
+2. Check Vue Version
+vue --version 
+
+3. Create Vue Appplication
+vue create learn-vue-js -d
+
+4. Start server 
+npm run serve
+
+B. BOOTSTRAP
+1. Installation
+npm install bootstrap OR npm install bootstrap@4.6.0
+npm i bootstrap bootstrap-vue  OR npm i bootstrap-vue@2.21.2
+
+2. Usage: add below lines to src/main.js
+import Vue from 'vue'
+import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import App from './App.vue'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
+Vue.config.productionTip = false
+
+Vue.use(BootstrapVue)
+Vue.use(IconsPlugin)
+
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+
+
+C. ERRORS
+1. Module not found: Error: Can't resolve 'sass-loader'
+npm install sass-loader -d
+npm install --save node-sass
+npm install --save sass-loader
+
+2. npm run server throws error sh: 1: vue-cli-service: not found
+npm i @vue/cli-service
