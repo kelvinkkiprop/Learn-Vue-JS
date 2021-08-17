@@ -1,6 +1,24 @@
-# Learn-Vue-JS
-Welcome to getting Started with VUE JS.
+# learn-vue-js
 
-Topics Covered:
-1. Vue Elements
-2. Vue Navigation
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
