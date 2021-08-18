@@ -4,9 +4,10 @@
 
       <main class="py-4">
           <!-- Render route component -->
-          <router-view></router-view>
-              <Index/>
-              <CreateProfile/>
+          <!-- <router-view></router-view> -->
+            <Index/>
+            <Forms/>
+            <ListsAndConditionals/>
       </main>
 
     <Footer/>
@@ -18,13 +19,16 @@
 import Navbar from './components/inc/Navbar.vue'
 import Footer from './components/inc/Footer.vue'
 import Index from './components/Index.vue'
-import CreateProfile from './components/profile/Create.vue'
+import Forms from './components/main/Forms.vue'
+import ListsAndConditionals from './components/main/ListsAndConditionals.vue'
+
+
 
 
 export default {
   name: 'App',
   components: {
-    Navbar,Footer,Index,CreateProfile
+    Navbar,Footer,Index,Forms,ListsAndConditionals
   }
 }
 </script>
