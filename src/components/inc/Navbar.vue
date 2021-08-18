@@ -7,69 +7,50 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-info">
             <div class="container">
                 <a class="navbar-brand" href="#">Learn Vue JS</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <!-- Left menu -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Dropdown
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Dropdown
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
                         </li>
                     </ul>
-
 
                     <!-- Right menu -->
-                    <ul class="navbar-nav ml-auto">
-                        <form class="form-inline my-2 mr-2 my-lg-0">
-                            <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-secondary btn-sm my-2 my-sm-0" type="submit">Search</button>
-                        </form>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Username
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Username
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Profile</a>
-                                <a class="dropdown-item" href="#">Logout</a>
-                            </div>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
                         </li>
                     </ul>
-                </div>
 
+                </div>
             </div>
         </nav>
-        <!-------------------------------------------------Navbar------------------------------------------------->
+         <!-------------------------------------------------Navbar------------------------------------------------->
 
     </header>
 </template>
 <!-------------------------------------------------./Template------------------------------------------------->
-
-
-<!-------------------------------------------------Script------------------------------------------------->
-<script>
-    export default {
-        data() {
-            return {
-                twitter: 'https://twitter.com/kelvinkkiprop',
-                github: 'https://github.com/kelvinkkiprop',
-                facebook: 'https://www.facebook.com/profile.php?id=100002918520822',
-            };
-        },
-    };
-</script>
-<!-------------------------------------------------./Script------------------------------------------------->

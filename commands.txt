@@ -13,53 +13,40 @@ npm run serve
 
 
 
-
 B. BOOTSTRAP
 1. Installation
-npm install bootstrap OR npm install bootstrap@4.6.0
-npm i bootstrap bootstrap-vue  OR npm i bootstrap-vue@2.21.2
+npm install bootstrap --save OR npm install bootstrap@^5.1.0 --save
 
 2. Usage: add below lines to src/main.js
-import 'bootstrap/dist/css/bootstrap.css'
-import 'bootstrap/dist/js/bootstrap.bundle.min';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
-C. JQUERY $ POPPER
+
+
+C. FONT AWESOME
 1. Installation
-npm install jquery popper.js
+npm install --save @fortawesome/fontawesome-free --save
 
-2. Usage: add below lines to src/main.js
-import $ from 'jquery';
-import Popper from 'popper.js';
-
-
-
-
-D. BOOTSTRAP-VUE
-1. Installation
-npm i bootstrap bootstrap-vue  OR npm i bootstrap-vue@2.21.2
-2. Usage: add below lines to src/main.js
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-import 'bootstrap-vue/dist/bootstrap-vue.css'
-
-Vue.config.productionTip = false
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
-
-
-
+2. Usage
+-Add below line to app.scss or main scss file
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
 
 
 
 C. ERRORS
+1. Failed to resolve loader: sass-loader
+npm install --save sass-loader 
+
+2. npm run server throws error sh: 1: vue-cli-service: not found
+npm i @vue/cli-service
+
+C. ERRORS
 1. Module not found: Error: Can't resolve 'sass-loader'
-npm install sass-loader -d
-npm install --save node-sass
-npm install --save sass-loader
+npm install --save sass-loader@10
+npm i sass
 
 2. npm run server throws error sh: 1: vue-cli-service: not found
 npm i @vue/cli-service
