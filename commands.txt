@@ -46,6 +46,19 @@ Vue.filter('myDate', function (value) { //Global method to format date
  return moment(value).format("Do MMM, YYYY")
 })
 
+2. Axios
+a. Installation
+npm install axios
+b. Usage: add to main.js
+//Axios
+import axios from 'axios'
+Vue.use(axios)
+
+
+2. Vue-Router
+a. Installation
+vue add router
+b. Usage: add to main.js
 
 C. ERRORS
 1. Failed to resolve loader: sass-loader

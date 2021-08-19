@@ -6,11 +6,13 @@
           <!-- Render route component -->
           <!-- <router-view></router-view> -->
             <Home/>
+            <Messages/>
             <About/>
             <Forms/>
             <ListsAndConditionals/>
             <InteractingWithComponents/>
             <ComponentsCommunication/>
+            <AccessingData/>
       </main>
 
     <Footer/>
@@ -27,16 +29,18 @@ import About from './components/main/About.vue'
 import ListsAndConditionals from './components/main/ListsAndConditionals.vue'
 import InteractingWithComponents from './components/main/InteractingWithComponents.vue'
 import ComponentsCommunication from './components/main/ComponentsCommunication.vue'
+import AccessingData from './components/main/AccessingData.vue'
 
-
-
+import Messages from './components/inc/Messages.vue'
 
 
 export default {
-  name: 'App',
+  name: 'App',        
   components: {
-    Navbar,Footer,Home,About,Forms,ListsAndConditionals,InteractingWithComponents,ComponentsCommunication
-  }
+    Navbar,Footer,Home,About,Forms,ListsAndConditionals,InteractingWithComponents,ComponentsCommunication,
+    AccessingData, Messages
+  },
+    
 }
 </script>
 
@@ -48,3 +52,4 @@ export default {
 
 </style>
 <!-------------------------------------------------./Style------------------------------------------------->
+

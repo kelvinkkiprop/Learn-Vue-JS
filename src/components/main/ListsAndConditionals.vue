@@ -2,38 +2,40 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Lists &amp; Conditionals</h4>
-            </div>
-            <div class="card-body p-5"> 
+        <div class="mt-3 mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Lists &amp; Conditionals</h4>
+                </div>
+                <div class="card-body p-5"> 
 
-                <h6>Family members</h6>
-                <div v-if="familyMembers.length > 0">
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-sm-4 ">
-                        <div class="col" v-for="member in familyMembers" :key="member.id">
-                            <div class="card mb-3">  
-                                <img src="@/assets/images/kelvin.jpg" class="img-fluid rounded-start" alt="Image">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{member.firstName}}&nbsp;{{member.lastName}}</h5>
-                                    <p class="card-text">{{member.description}}</p>
-                                    <p class="card-text"><small class="text-muted">DOB: {{member.dob}}</small></p>
-                                    <a class="btn btn-secondary" @click="changeShowMore()">Show more</a>
-                                </div>                    
+                    <h6>Family members</h6>
+                    <div v-if="familyMembers.length > 0">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-sm-4 ">
+                            <div class="col" v-for="member in familyMembers" :key="member.id">
+                                <div class="card mb-3">  
+                                    <img src="@/assets/images/kelvin.jpg" class="img-fluid rounded-start" alt="Image">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{member.firstName}}&nbsp;{{member.lastName}}</h5>
+                                        <p class="card-text">{{member.description}}</p>
+                                        <p class="card-text"><small class="text-muted">DOB: {{member.dob}}</small></p>
+                                        <a class="btn btn-secondary" @click="changeShowMore()">Show more</a>
+                                    </div>                    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div v-else>
-                    <p class="text-muted text-center p-5">No family members found</p>
+                    <div v-else>
+                        <p class="text-muted text-center p-5">No family members found</p>
+                    </div>
+
+
                 </div>
 
+                <div class="card-footer">            
+                </div>
 
             </div>
-
-            <div class="card-footer">            
-            </div>
-
         </div>
     </div>
 </template>

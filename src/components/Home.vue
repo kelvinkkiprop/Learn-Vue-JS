@@ -3,7 +3,7 @@
 <template>
     <section id="home">
         <div class="container">
-            <div class="mt-3 mb-3">
+            <div class="mt-5 mb-3">
 
                 <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
                     <div class="carousel-indicators">

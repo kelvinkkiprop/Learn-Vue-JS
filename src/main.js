@@ -9,10 +9,13 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 //Moment
 import moment from 'moment';
 Vue.filter('myDate', function (value) { //Global method to format date
- if (!value) return ''
- return moment(value).format("Do MMM, YYYY")
+    if (!value) return ''
+    return moment(value).format("Do MMM, YYYY")
 });
 
+//Axios
+Vue.use(axios)
+import axios from 'axios'
 
 //Default config file
 Vue.config.productionTip = false

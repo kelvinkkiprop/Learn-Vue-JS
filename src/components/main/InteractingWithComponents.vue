@@ -2,35 +2,37 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="card">
-            <div class="card-header">
-                <h4 class="card-title">Interacting with Components</h4>
-            </div>
-            <div class="card-body p-5"> 
+        <div class="mt-3 mb-3">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Interacting with Components</h4>
+                </div>
+                <div class="card-body p-5"> 
 
-                <h6>Heroes</h6>
-                <div v-if="heroes.length > 0">
-                    <div class="mb-3" v-for="hero in heroes" :key="hero.id">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title">{{hero.firstName}}&nbsp;{{hero.lastName}}</h5>
-                                <p class="card-text">{{hero.description}}</p>
-                                <p>Date:&nbsp;<small class="text-muted">{{hero.originDate | myDate }}</small></p>
+                    <h6>Heroes</h6>
+                    <div v-if="heroes.length > 0">
+                        <div class="mb-3" v-for="hero in heroes" :key="hero.id">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{hero.firstName}}&nbsp;{{hero.lastName}}</h5>
+                                    <p class="card-text">{{hero.description}}</p>
+                                    <p>Date:&nbsp;<small class="text-muted">{{hero.originDate | myDate }}</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
+
+                    <div v-else>
+                        <p class="text-muted text-center p-5">No hereos found</p>
+                    </div>
+
+
                 </div>
 
-                <div v-else>
-                    <p class="text-muted text-center p-5">No hereos found</p>
+                <div class="card-footer">            
                 </div>
 
-
             </div>
-
-            <div class="card-footer">            
-            </div>
-
         </div>
     </div>
 </template>
