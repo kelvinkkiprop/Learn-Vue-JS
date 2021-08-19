@@ -36,6 +36,7 @@
 <script>
 
     import axios from 'axios';
+    import { API_URL } from '../../shared/constants';
 
     export default {
         //Data
@@ -49,11 +50,10 @@
         methods: {
             //Load
             loadPosts(){
-                axios.get("https://my-json-server.typicode.com/typicode/demo/posts")
+                axios.get(`${API_URL}/posts`)
                 .then(response => {
                     this.posts = response.data;
-                }).catch(error => {
-                   
+                }).catch(error => {                   
                     console.log(error);
                 });
             },

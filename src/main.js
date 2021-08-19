@@ -19,7 +19,9 @@ import VueAxios from 'vue-axios'
 Vue.use(VueAxios, axios)
 
 
+ //Vuex store and router
 import router from './router'
+import store from './store'
 
 //Default config file
 Vue.config.productionTip = false
@@ -27,6 +29,8 @@ Vue.config.productionTip = false
 
 //Vue render default
 new Vue({
+   //Vuex store and router
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')

@@ -54,11 +54,17 @@ b. Usage: add to main.js
 import axios from 'axios'
 Vue.use(axios)
 
-
-2. Vue-Router
+3. Vue-Router
 a. Installation
 vue add router
 b. Usage: add to main.js
+
+4. VueX
+a. Installation
+vue add vuex
+
+
+
 
 C. ERRORS
 1. Failed to resolve loader: sass-loader

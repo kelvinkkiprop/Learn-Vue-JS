@@ -30,6 +30,7 @@
                                 <li><router-link to="/interactingwithcomponents" class="dropdown-item" href="#">Interacting With Components</router-link></li>
                                 <li><router-link to="/componentscommunication" class="dropdown-item" href="#">Components Communications</router-link></li>
                                 <li><router-link to="/accessingdata" class="dropdown-item" href="#">Accessing Data</router-link></li>
+                                <li><router-link to="/managingdatastatewithvuex" class="dropdown-item" href="#">Managing Data State with Vuex</router-link></li>
                             </ul>
                         </li>
                     </ul>

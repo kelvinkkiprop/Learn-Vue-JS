@@ -63,7 +63,14 @@ const routes = [
     name: 'AccessingData',
     // lazy-loading when the route is visited.
     component: () => import(/* webpackChunkName: "accessingdata" */ '../components/main/AccessingData.vue')
-  }
+  },
+  {
+    path: '/managingdatastatewithvuex',
+    name: 'ManagingDataStateWithVuex',
+    // lazy-loading when the route is visited.
+    component: () => import(/* webpackChunkName: "managingdatastatewithvuex" */ '../components/main/ManagingDataStateWithVuex.vue')
+  },
+
 ]
 
 const router = new VueRouter({
