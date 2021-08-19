@@ -2,7 +2,7 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="mt-3 mb-3">
+        <div class="mt-5 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Accessing Data</h4>
@@ -52,6 +52,9 @@
                 axios.get("https://my-json-server.typicode.com/typicode/demo/posts")
                 .then(response => {
                     this.posts = response.data;
+                }).catch(error => {
+                   
+                    console.log(error);
                 });
             },
         },

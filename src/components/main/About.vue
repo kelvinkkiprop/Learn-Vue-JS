@@ -2,7 +2,7 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container" id="about">
-        <div class="mt-3 mb-3">
+        <div class="mt-5 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">About</h4>

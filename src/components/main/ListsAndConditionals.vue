@@ -2,7 +2,7 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="mt-3 mb-3">
+        <div class="mt-5 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Lists &amp; Conditionals</h4>
@@ -45,12 +45,9 @@
 <!-------------------------------------------------Script------------------------------------------------->
 <script>
     export default {
-        name: 'Family Members',
-        showMore: false,
+        name: 'FamilyMembers',
         data() {
             return {
-            selectedMember: undefined,
-            showMore: false,
             familyMembers: [
                     {
                         id: 10,

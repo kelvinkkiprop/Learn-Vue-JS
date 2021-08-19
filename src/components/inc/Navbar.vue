@@ -15,20 +15,21 @@
                     <!-- Left menu -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
+                            <router-link to="/" class="nav-link active">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <router-link to="/about" class="nav-link">About</router-link>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Topics
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Forms</a></li>
-                                <li><a class="dropdown-item" href="#">Lists &amp; Conditionals</a></li>
-                                <li><a class="dropdown-item" href="#">Interacting With Components</a></li>
-                                <li><a class="dropdown-item" href="#">Components Communications</a></li>
+                                <li><router-link to="/forms" class="dropdown-item" href="#">Forms</router-link></li>
+                                <li><router-link to="/listsandconditionals" class="dropdown-item" href="#">Lists &amp; Conditionals</router-link></li>
+                                <li><router-link to="/interactingwithcomponents" class="dropdown-item" href="#">Interacting With Components</router-link></li>
+                                <li><router-link to="/componentscommunication" class="dropdown-item" href="#">Components Communications</router-link></li>
+                                <li><router-link to="/accessingdata" class="dropdown-item" href="#">Accessing Data</router-link></li>
                             </ul>
                         </li>
                     </ul>

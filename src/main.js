@@ -13,9 +13,13 @@ Vue.filter('myDate', function (value) { //Global method to format date
     return moment(value).format("Do MMM, YYYY")
 });
 
-//Axios
-Vue.use(axios)
+
 import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)
+
+
+import router from './router'
 
 //Default config file
 Vue.config.productionTip = false
@@ -23,5 +27,6 @@ Vue.config.productionTip = false
 
 //Vue render default
 new Vue({
-  render: h => h(App),
+  router,
+  render: h => h(App)
 }).$mount('#app')

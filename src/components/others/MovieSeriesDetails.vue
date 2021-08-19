@@ -1,5 +1,4 @@
-<!-------------------------------------------------
-Template------------------------------------------------->
+<!-------------------------------------------------Template------------------------------------------------->
 <template>
     <!-- bind data from props -->
     <p>Origin:&nbsp;<span class="text-muted">{{seriesDetail.origin}}</span></p>
@@ -22,20 +21,6 @@ Template------------------------------------------------->
                 
             },
         },
-
-        showToast(){
-            let option ={
-            animation: true,
-            autohide: true,
-            delay: 500
-            };
-            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-            var toastList = toastElList.map(function (toastEl) {
-                return new bootstrap.Toast(toastEl, option)
-            });
-
-            var toastEl = toast();
-        }
 
     };
 </script>

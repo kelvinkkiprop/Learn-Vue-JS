@@ -74,3 +74,11 @@ npm i sass
 
 2. npm run server throws error sh: 1: vue-cli-service: not found
 npm i @vue/cli-service
+
+3. Uncaught (in promise) TypeError: Cannot read property
+a. Install
+npm install --save axios vue-axios
+b. Add to main.js
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+Vue.use(VueAxios, axios)

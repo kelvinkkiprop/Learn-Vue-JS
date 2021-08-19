@@ -2,7 +2,7 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="mt-3 mb-3">
+        <div class="mt-5 mb-3">
             <div class="card">
                 <div class="card-header">
                     <h4 class="card-title">Interacting with Components</h4>
@@ -14,9 +14,12 @@
                         <div class="mb-3" v-for="hero in heroes" :key="hero.id">
                             <div class="card">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{hero.firstName}}&nbsp;{{hero.lastName}}</h5>
+                                    <h5 class="card-title"><i class="fa fa-user-circle" aria-hidden="true"></i> 
+                                    {{hero.firstName}}&nbsp;{{hero.lastName}}</h5>
                                     <p class="card-text">{{hero.description}}</p>
                                     <p>Date:&nbsp;<small class="text-muted">{{hero.originDate | myDate }}</small></p>
+                                    <!-- Pass data via props -->
+                                    <router-link :to="{name:'HeroDetails', params:{id: hero.id} }" class="btn btn-primary btn-sm">Details</router-link>
                                 </div>
                             </div>
                         </div>
@@ -81,31 +84,10 @@
         name: 'Heroes',
         data() {
             return {
-            selectedHero: undefined,
             message: '',
             heroes: ourHeroes,
             };
         },
-
-        //Methods
-        created:{//DOM created
-
-        },
-
-        mounted:{//DOM mounted
-
-        },
-
-        computed: {//Fired on item change
-        },
-
-        methods: {//Custom methods
-            fullName(){//fullName
-                return `${this.hero.firstName} ${this.hero.lastName}`;//concatinate
-            },
-
-        },
-
 
     };
 </script>

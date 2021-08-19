@@ -2,10 +2,10 @@
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
     <div class="container">
-        <div class="mt-3 mb-3">
+        <div class="mt-5 mb-3">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Lists &amp; Conditionals</h4>
+                    <h4 class="card-title">Components Communication</h4>
                 </div>
                 <div class="card-body p-5"> 
 
@@ -20,7 +20,6 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{series.title}}</h5>
                                         <p class="card-text">{{series.description}}</p>
-                                        <MovieSeriesCard/>
                                         <!-- pass data using props -->
                                         <MovieSeriesDetails v-bind:seriesDetail="series"/>                                    
                                         <button type="button" class="btn btn-danger btn-sm">Read More</button>
@@ -50,12 +49,11 @@
 <script>
     //Imports
     import MovieSeriesDetails from '@/./components/others/MovieSeriesDetails.vue'
-    import MovieSeriesCard from '@/./components/others/MovieSeriesCard.vue'
     
 
     //Exports
     export default {
-        name: 'Movie Series',
+        name: 'MovieSeries',
         data() {
             return {
             movieseries: [
@@ -85,7 +83,7 @@
         },
 
         //Components
-        components: {MovieSeriesDetails,MovieSeriesCard},
+        components: {MovieSeriesDetails},
 
         //Methods
         methods: {
