@@ -35,6 +35,17 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 
 
+D. JS PACKAGES
+1. Moment
+a. Installation
+npm install moment --save
+b. Usage: add to main.js
+import moment from 'moment';
+Vue.filter('myDate', function (value) { //Global method to format date
+ if (!value) return ''
+ return moment(value).format("Do MMM, YYYY")
+})
+
 
 C. ERRORS
 1. Failed to resolve loader: sass-loader

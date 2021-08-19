@@ -6,6 +6,13 @@ import App from './App.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
+//Moment
+import moment from 'moment';
+Vue.filter('myDate', function (value) { //Global method to format date
+ if (!value) return ''
+ return moment(value).format("Do MMM, YYYY")
+});
+
 
 //Default config file
 Vue.config.productionTip = false

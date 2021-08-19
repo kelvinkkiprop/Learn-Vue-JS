@@ -8,24 +8,28 @@
             </div>
             <div class="card-body p-5"> 
 
-                <h6>Family members</h6>
-                <div v-if="familyMembers.length > 0">
-                    <div class="row row-cols-2 row-cols-md-3 row-cols-sm-4 ">
-                        <div class="col" v-for="member in familyMembers" :key="member.id">
-                            <div class="card mb-3">  
-                                <img src="@/assets/images/kelvin.jpg" class="img-fluid rounded-start" alt="Image">
+                <h6>Movie Series</h6>
+                <div v-if="movieseries.length > 0">
+                    <div class="card mb-3" v-for="series in movieseries" :key="series.id">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="@/assets/images/money_heist.jpg" class="img-fluid rounded-start h-100" alt="Image">
+                            </div>
+                            <div class="col-md-8">
                                 <div class="card-body">
-                                    <h5 class="card-title">{{member.firstName}}&nbsp;{{member.lastName}}</h5>
-                                    <p class="card-text">{{member.description}}</p>
-                                    <p class="card-text"><small class="text-muted">DOB: {{member.dob}}</small></p>
-                                    <a class="btn btn-secondary" @click="changeShowMore()">Show more</a>
-                                </div>                    
+                                    <h5 class="card-title">{{series.title}}</h5>
+                                    <p class="card-text">{{series.description}}</p>
+                                    <MovieSeriesCard/>
+                                    <!-- pass data using props -->
+                                    <MovieSeriesDetails v-bind:seriesDetail="series"/>                                    
+                                    <button type="button" class="btn btn-danger btn-sm">Read More</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div v-else>
-                    <p class="text-muted text-center p-5">No family members found</p>
+                    <p class="text-muted text-center p-5">No series found</p>
                 </div>
 
 
@@ -42,47 +46,48 @@
 
 <!-------------------------------------------------Script------------------------------------------------->
 <script>
+    //Imports
+    import MovieSeriesDetails from '@/./components/others/MovieSeriesDetails.vue'
+    import MovieSeriesCard from '@/./components/others/MovieSeriesCard.vue'
+    
+
+    //Exports
     export default {
-        name: 'Family Members',
-        showMore: false,
+        name: 'Movie Series',
         data() {
             return {
-            selectedMember: undefined,
-            showMore: false,
-            familyMembers: [
+            movieseries: [
                     {
                         id: 10,
-                        firstName: 'Kelvin',
-                        lastName: 'Kiprop',
-                        dob: '11/09/1995',
-                        profilePicture: '@/assets/images/kelvin.jpg',
+                        title: 'Game of Thrones',
+                        image: '@/assets/images/money_heist.jpg',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien mauris, commodo at pretium pellentesque, malesuada ut nisl. Donec venenatis vulputate mauris sit amet ornare. ',
+                        origin: 'USA',
                     },
                     {
                         id: 20,
-                        firstName: 'PrudenceKelly',
-                        lastName: 'Jepchumba',   
-                        dob: '08/08/2019',                     
-                        profilePicture: '@/assets/images/kelvin.jpg',
+                        title: 'Money Heist',
+                        image: '@/assets/images/money_heist.jpg',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien mauris, commodo at pretium pellentesque, malesuada ut nisl. Donec venenatis vulputate mauris sit amet ornare. ',
+                        origin: 'Spain',
                     },
                     {
                         id: 30,
-                        firstName: 'Mercy',
-                        lastName: 'Karambu',  
-                        dob: '23/02/1995',                      
-                        profilePicture: '@/assets/images/kelvin.jpg',
+                        title: 'The Walking Death',
+                        image: '@/assets/images/money_heist.jpg',
                         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien mauris, commodo at pretium pellentesque, malesuada ut nisl. Donec venenatis vulputate mauris sit amet ornare. ',
+                        origin: 'UK',
                     },
                 ],
             };
         },
 
+        //Components
+        components: {MovieSeriesDetails,MovieSeriesCard},
+
         //Methods
         methods: {
-            changeShowMore(){
-                this.showMore = true;
-            },
+
         },
 
 

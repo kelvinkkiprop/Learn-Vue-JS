@@ -1,7 +1,7 @@
 
 <!-------------------------------------------------Template------------------------------------------------->
 <template>
-    <section id="index">
+    <section id="home">
         <div class="container">
             <div class="mt-3 mb-3">
 

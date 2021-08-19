@@ -5,9 +5,12 @@
       <main class="py-4">
           <!-- Render route component -->
           <!-- <router-view></router-view> -->
-            <Index/>
+            <Home/>
+            <About/>
             <Forms/>
             <ListsAndConditionals/>
+            <InteractingWithComponents/>
+            <ComponentsCommunication/>
       </main>
 
     <Footer/>
@@ -18,9 +21,13 @@
 
 import Navbar from './components/inc/Navbar.vue'
 import Footer from './components/inc/Footer.vue'
-import Index from './components/Index.vue'
+import Home from './components/Home.vue'
 import Forms from './components/main/Forms.vue'
+import About from './components/main/About.vue'
 import ListsAndConditionals from './components/main/ListsAndConditionals.vue'
+import InteractingWithComponents from './components/main/InteractingWithComponents.vue'
+import ComponentsCommunication from './components/main/ComponentsCommunication.vue'
+
 
 
 
@@ -28,7 +35,7 @@ import ListsAndConditionals from './components/main/ListsAndConditionals.vue'
 export default {
   name: 'App',
   components: {
-    Navbar,Footer,Index,Forms,ListsAndConditionals
+    Navbar,Footer,Home,About,Forms,ListsAndConditionals,InteractingWithComponents,ComponentsCommunication
   }
 }
 </script>

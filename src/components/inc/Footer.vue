@@ -22,9 +22,9 @@
                     <div class="col-md">
                         <h6>Social Media</h6>
                         <p class="text-nowrap">
-                            <a v-bind:href="social_media.twitter" target="_blank"><b-icon-twitter></b-icon-twitter></a>&nbsp;
-                            <a v-bind:href="social_media.facebook" target="_blank"><b-icon-facebook></b-icon-facebook></a>&nbsp;
-                            <a v-bind:href="social_media.github" target="_blank"><b-icon-github></b-icon-github></a>&nbsp;
+                            <a v-bind:href="social_media.twitter" target="_blank"><i class="fab fa-twitter" aria-hidden="true"></i></a>&nbsp;
+                            <a v-bind:href="social_media.facebook" target="_blank"><i class="fab fa-facebook" aria-hidden="true"></i></a>&nbsp;
+                            <a v-bind:href="social_media.github" target="_blank"><i class="fab fa-github" aria-hidden="true"></i></a>&nbsp;
                         </p>
                     </div>
                 </div>
@@ -69,13 +69,13 @@
 
     footer {
         a{
-            color: $white;
+            color: $white !important;
             border-radius: 45px;
             padding: 0 2px 0 2px;
         }
         a:hover{
-            background-color: $white;
-            color: $black;
+            background-color: $white !important;
+            color: $black !important;
         }
     }
 </style>
